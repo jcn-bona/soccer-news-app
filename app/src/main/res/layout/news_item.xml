@@ -72,6 +72,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/btOpenLink"
             app:layout_constraintEnd_toStartOf="@+id/ivShare"
             app:layout_constraintTop_toTopOf="@+id/btOpenLink"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             app:srcCompat="@drawable/ic_favorites" />
 
         <ImageView
@@ -86,6 +87,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/btOpenLink"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btOpenLink"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             app:srcCompat="@android:drawable/ic_menu_share" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
