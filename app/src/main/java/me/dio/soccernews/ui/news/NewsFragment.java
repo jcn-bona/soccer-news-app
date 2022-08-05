@@ -38,9 +38,25 @@ public class NewsFragment extends Fragment {
             binding.rvNews.setAdapter(new NewsAdapter(news, updatedNews -> {
                 MainActivity activity = (MainActivity) getActivity();
                 if (activity != null) {
-                    activity.getDb().NewsDao().insert(updatedNews);
+                    activity.getDb().NewsDao().save(updatedNews);
                 }
             }));
+        });
+
+        newsViewModel.getState().observe(getViewLifecycleOwner(), state -> {
+            switch (state) {
+                case DOING:
+                    // TODO Iniciar SwipeRefreshLayout (Loading)
+                    break;
+                case DONE:
+                    // TODO Finalizar SwipeRefreshLayout (Loading)
+                    break;
+                case ERROR:
+                    // TODO Finalizar SwipeRefreshLayout (Loading)
+                    // TODO Mostra o erro
+
+            }
+
         });
         return root;
     }
