@@ -67,6 +67,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             } else {
                 holder.binding.ivFavorite.setColorFilter(context.getResources().getColor(R.color.favorite_off));
             }
+
         });
     }
 
